@@ -1,11 +1,11 @@
 {
-  "buildCommand": "cd frontend && npm ci --legacy-peer-deps --prefer-offline --no-audit && npm run build",
+  "buildCommand": "cd frontend && npm install --legacy-peer-deps --no-audit --no-fund && npm run build",
   "outputDirectory": "frontend/build",
-  "installCommand": "npm install --legacy-peer-deps --prefer-offline --no-audit",
   "env": {
     "REACT_APP_API_URL": "@api_url",
     "REACT_APP_FRONTEND_URL": "@frontend_url",
-    "CI": "false"
+    "CI": "false",
+    "SKIP_PREFLIGHT_CHECK": "true"
   },
   "rewrites": [
     {
